@@ -21,6 +21,7 @@ class StringsChallengeTest {
     private static Stream<Arguments> inputStrings() {
         return Stream.of(
             Arguments.of("swiss", 'w'),
+            Arguments.of("aabbccdd", null),
             Arguments.of(null, null),
             Arguments.of("", null),
             Arguments.of("   ", null)

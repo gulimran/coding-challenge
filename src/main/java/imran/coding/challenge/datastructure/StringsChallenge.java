@@ -9,6 +9,11 @@ import java.util.Objects;
 @Component
 public class StringsChallenge {
 
+    /**
+     * A function to find the first non-repeating character in a string.
+     * @param input - The input string
+     * @return The first non-repeating character in the input string or null
+     */
     public Character firstNonRepeatingChar(String input) {
         if (Objects.isNull(input) || input.isBlank()) return null;
 
@@ -26,6 +31,6 @@ public class StringsChallenge {
         return characterCount.entrySet().stream()
             .filter(entry -> entry.getValue() == 1)
             .map(Map.Entry::getKey)
-            .toList().get(0);
+            .findFirst().orElse(null);
     }
 }
