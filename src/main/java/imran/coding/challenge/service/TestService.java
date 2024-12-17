@@ -18,7 +18,10 @@ public class TestService {
         System.out.println("StringsChallenge first non-repeating character in 'swiss' is= "
             + stringsChallenge.firstNonRepeatingChar("swiss"));
 
-        System.out.println("SortingChallenge merging two lists {1,2,3,4} and {5,6,7,8} = "
+        System.out.println("SortingChallenge merging two arrays {1,2,3,4} and {5,6,7,8} = "
             + Arrays.toString(sortingChallenge.mergeSortedArrays(new int[]{1, 2, 3, 4}, new int[]{5, 6, 7, 8})));
+
+        System.out.println("SortingChallenge merging two arrays using quick sort {1,2,3,4} and {5,6,7,8} = "
+            + Arrays.toString(sortingChallenge.mergeSortedArraysQuickSort(new int[]{1, 2, 3, 4}, new int[]{5, 6, 7, 8})));
     }
 }
