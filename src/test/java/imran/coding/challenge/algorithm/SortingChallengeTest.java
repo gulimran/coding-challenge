@@ -35,8 +35,15 @@ class SortingChallengeTest {
 
     @ParameterizedTest
     @MethodSource(value = "inputIntegerArrays")
-    void findFirstNonRepeatingCharacterInString(int[] array1, int[] array2, int[] expectedOutput) {
+    void mergeTwoIntegerArraysAndSortTheResult(int[] array1, int[] array2, int[] expectedOutput) {
         int[] result = underTest.mergeSortedArrays(array1, array2);
+        assertThat(result).isEqualTo(expectedOutput);
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "inputIntegerArrays")
+    void mergeTwoIntegerArraysAndSortTheResultUsingQuickSort(int[] array1, int[] array2, int[] expectedOutput) {
+        int[] result = underTest.mergeSortedArraysQuickSort(array1, array2);
         assertThat(result).isEqualTo(expectedOutput);
     }
 
