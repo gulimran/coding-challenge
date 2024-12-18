@@ -1,6 +1,7 @@
 package imran.coding.challenge.service;
 
 import imran.coding.challenge.algorithm.SortingChallenge;
+import imran.coding.challenge.concurrency.ThreadSafeSingleton;
 import imran.coding.challenge.datastructure.StringsChallenge;
 import imran.coding.challenge.design.RateLimiterChallenge;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,9 @@ public class TestService {
             + rateLimiterChallenge.allowRequest(userId));
         System.out.println("RateLimiterChallenge allow 4th request = "
             + rateLimiterChallenge.allowRequest(userId));
+
+        System.out.println("ThreadSafeSingleton get single instance of the class = "
+            + ThreadSafeSingleton.getInstance().toString() + " is same as another instance = "
+            + ThreadSafeSingleton.getInstance().toString());
     }
 }
