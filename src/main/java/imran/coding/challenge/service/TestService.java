@@ -2,17 +2,22 @@ package imran.coding.challenge.service;
 
 import imran.coding.challenge.algorithm.SortingChallenge;
 import imran.coding.challenge.concurrency.ThreadSafeSingleton;
+import imran.coding.challenge.datastructure.NumbersChallenge;
 import imran.coding.challenge.datastructure.StringsChallenge;
 import imran.coding.challenge.design.RateLimiterChallenge;
 import imran.coding.challenge.files.WordCountChallenge;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class TestService {
 
     @Autowired
     private StringsChallenge stringsChallenge;
+
+    @Autowired
+    private NumbersChallenge numbersChallenge;
 
     @Autowired
     private SortingChallenge sortingChallenge;
@@ -53,5 +58,8 @@ public class TestService {
         } catch (Exception e) {
             System.out.println("WordCountChallenge unable to count words in the given file '" + fileName + "'");
         }
+
+        System.out.println("numbersChallenge with Pythagorean triple numbers in 1,6,10,9,7,8 = "
+            + numbersChallenge.containsPythagoras(List.of(1,6,10,9,7,8)));
     }
 }
