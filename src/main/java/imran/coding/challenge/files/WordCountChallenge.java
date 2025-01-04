@@ -11,6 +11,12 @@ import java.util.Map;
 @Component
 public class WordCountChallenge {
 
+    /**
+     * Count unique words in a given file.
+     * @param file - The input file
+     * @return The count of occurrence of each unique word in the file
+     * @throws IOException
+     */
     public Map<String, Integer> wordCount(String file) throws IOException {
         Map<String, Integer> wordCount = new HashMap<>();
 
