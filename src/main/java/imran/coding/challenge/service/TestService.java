@@ -3,6 +3,7 @@ package imran.coding.challenge.service;
 import imran.coding.challenge.algorithm.SortingChallenge;
 import imran.coding.challenge.concurrency.ThreadSafeSingleton;
 import imran.coding.challenge.datastructure.NumbersChallenge;
+import imran.coding.challenge.datastructure.Palindrome;
 import imran.coding.challenge.datastructure.StringsChallenge;
 import imran.coding.challenge.design.RateLimiterChallenge;
 import imran.coding.challenge.files.WordCountChallenge;
@@ -27,6 +28,9 @@ public class TestService {
 
     @Autowired
     private WordCountChallenge wordCountChallenge;
+
+    @Autowired
+    private Palindrome palindrome;
 
     public void run() {
         System.out.println("StringsChallenge first non-repeating character in 'swiss' is= "
@@ -59,7 +63,10 @@ public class TestService {
             System.out.println("WordCountChallenge unable to count words in the given file '" + fileName + "'");
         }
 
-        System.out.println("numbersChallenge with Pythagorean triple numbers in 1,6,10,9,7,8 = "
+        System.out.println("NumbersChallenge with Pythagorean triple numbers in 1,6,10,9,7,8 = "
             + numbersChallenge.containsPythagoras(List.of(1,6,10,9,7,8)));
+
+        System.out.println("Palindrome with 'Lisa Bonet ate no basil' is "
+            + palindrome.isPalindrome("Lisa Bonet ate no basil"));
     }
 }

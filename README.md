@@ -1,12 +1,22 @@
 # Coding Challenges
 
 ## Contents
+1. [Project](#Project)
 1. [Algorithms](#Algorithms)
 2. [Concurrency](#Concurrency)
 3. [Data Structures](#Data-Structures)
 4. [Design](#Design)
 5. [Files](#Files)
 
+## Project
+
+- Spring boot application
+- Java 17
+- Gradle using gradle wrapper version 8.11.1
+- TDD approach using JUnit 
+- [TestService](https://github.com/gulimran/coding-challenge/blob/fe3729e3710dc6c9941d8ba419fede76c5768e49/src/main/java/imran/coding/challenge/service/TestService.java) to run through all challenges when app is run using `bootRun`.  It uses a command line runner.
+
+# Challenges
 
 ## Algorithms
 
@@ -30,6 +40,10 @@
 ### Strings
 
 1. A function to find the first non-repeating character in a string.
+
+### Palindrome
+
+1. A word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run. Determine whether the given string is a palindrome or not.
 
 ## Design
 
